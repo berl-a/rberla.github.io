@@ -57,5 +57,8 @@ div>img {
 .filtered {
 	filter: brightness(160%);
 	-webkit-filter: brightness(160%);
-	transitios: all ease 0.5s;
+	transition: all ease 0.5s;
+}
+.award {
+	
 }
