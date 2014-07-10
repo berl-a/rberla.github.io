@@ -18,7 +18,7 @@ $(document).ready(
 					"clap"
 				],
 				path: "plugins/ion-sound/",
-				volume: 0.7
+				volume: 0.5
 			}	
 		);
 		
@@ -29,6 +29,20 @@ $(document).ready(
 				
 				if(number_of_clicked_letters === 5) {
 					$.ionSound.play("clap");
+					
+					var $award = $('img.award');
+					$award.css('display', 'inherit');
+					$award.animate(
+						{
+							'opacity': 1
+						},
+						{
+							duration: 2500,
+							complete: function() {
+								$award.remove();
+							}
+						}
+					);
 				}
 			}
 		);
